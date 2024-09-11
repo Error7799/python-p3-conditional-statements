@@ -2,9 +2,12 @@
 
 def admin_login(username, password):
     # your code here
-    if (username == "admin" or username == "ADMIN") and password == "12345":
-        return "Access granted"
-    else:
+    try:
+        if (username == "admin" or username == "ADMIN") and password == "12345":
+             return "Access granted"
+        else:
+             return "Access denied"
+    except ValueError:
         return "Access denied"
     pass
 
